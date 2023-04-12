@@ -34,6 +34,8 @@ Let's start with a classic of reactive frameworks, the Seconds Counter:
 </html>
 ```
 
+<iframe src="/examples/intro/seconds"/>
+
 When it serves a page, Reflect.js turns it into standard HTML with added code that starts executing in the server itself and then continues in the browser.
 
 By opening [http://localhost:3001/seconds](http://localhost:3001/seconds) you'll get a live seconds counter, and in the page source you can see it was initially output with "seconds: 0" and then regularly updated in the client.
@@ -76,6 +78,8 @@ In our example we'll create an app with its own dir in intro/app and a page like
   </body>
 </html>
 ```
+
+<iframe src="/examples/intro/app"/>
 
 This page is delivered for all paths inside its own directory, thanks to the [`:URLPATH`](reference/server#urlpath) directive. It can know what name it was requested with by using the [`head.router`](reference/stdlib#head-router) standard component.
 
@@ -141,11 +145,13 @@ Custom tag definitions are usually collected in page fragments (with an `.htm` e
   <link href="index.css" rel="stylesheet">
 
   <:define tag="app-product" class="product">
-    <span>[[name]]<span>
+    <span>[[name]]</span>
     <span class="price">€[[price]]</span>
   </:define>
 </lib>
 ```
+
+<!--- <iframe src="/examples/intro/products"/> -->
 
 > <i class="bi-info-square-fill"></i> Page fragments must have an arbitrary root tag, like `<lib>` here. You can learn more in the [reusability examples](examples/reusability).
 

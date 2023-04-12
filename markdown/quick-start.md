@@ -10,7 +10,7 @@ Reflect.js is an [Express](https://expressjs.com/) application for [Node.js](htt
 npm install -g reflectjs-core
 ```
 
-Once installed, you can use the [`reflectjs`](reference/cli) command to start a [development server](reference/server) from your current directory.
+Once installed, we can use the [`reflectjs`](reference/cli) command to start a [development server](reference/server) from our current directory.
 
 ## Hello World
 
@@ -21,7 +21,7 @@ reflectjs
 # ... http://localhost:3001
 ```
 
-You can add a simple page...
+We can add a simple page...
 
 ```html
 <!-- index.html -->
@@ -67,7 +67,7 @@ new reflectjs.Server({
 });
 ```
 
-In TypeScript you can use imports instead:
+In TypeScript we can use imports instead:
 
 ```ts
 // index.ts
@@ -80,7 +80,7 @@ new Server({
 });
 ```
 
-We can now create a page...
+We can now create a page in `docroot/`...
 
 ```html
 <!-- index.html -->
@@ -102,11 +102,11 @@ node index.js
 # ... START http://localhost:3002
 ```
 
-> <i class="bi-info-square-fill"></i> By using Reflect.js in a project you can customize it and add your own services and middleware to the server. All options are documented in the [Server Reference](reference/server).
+> <i class="bi-info-square-fill"></i> By using Reflect.js in a project we can customize it and add our own services and middleware to the server. All options are documented in the [Server Reference](reference/server).
 
 ## Next steps
 
 * [Introduction](introduction) &mdash; get the gist of Reflect.js
 * [Examples](examples/reacivity) &mdash; see all the features in bite-sized examples
 * [Tutorial](tutorial) &mdash; get a taste of Reflect.js development
-* [Reference](reference/cli) &mdash; find all the details you might need
+* [Reference](reference/cli) &mdash; find all the details
