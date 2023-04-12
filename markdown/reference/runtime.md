@@ -1,6 +1,6 @@
 # Runtime
 
-Reflect.js runtime reserves special treatment to the following [logic values](language#logic-values).
+The Reflect.js runtime reserves special treatment to the following [logic values](language#values).
 
 ## Special values
 
