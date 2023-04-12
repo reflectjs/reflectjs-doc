@@ -1,6 +1,6 @@
 # Language
 
-Reflect.js is declarative reactive language for implementing the Presenter in a [Model-view-presenter](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93presenter) architecture, where the Model is usually provided by RESTful web services and the View is the browser DOM.
+Reflect.js is a declarative reactive language for implementing the Presenter in a [Model-view-presenter](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93presenter) architecture, where the Model is usually provided by RESTful web services and the View is the browser DOM.
 
 It extends HTML with [logic values](#values), [reactive JavaScript expressions](#expressions), [visibility scopes](#scopes) and [scope methods](#methods).
 
@@ -16,7 +16,7 @@ Logic values can be added to any HTML using `:`-prefixed attributes. These attri
 </html>
 ```
 
-The output page won't have either `:msg` or `:did-init` attributes, it will have its own JavaScript code that will handle them. Specifically, page root object &mdash; associated with page root tag, `<html>` &mdash; is given an `msg` property whose value is the `"hello"` string.
+The output page won't have the `:msg` and `:did-init` attributes, it will have its own JavaScript code that will handle them. Specifically, page root object &mdash; associated with page root tag, `<html>` &mdash; is given an `msg` property whose value is the `"hello"` string.
 
 `did-init` is a [delegate method](runtime#did) that's executed when a tag's scope is initialized. In this example it simply logs the value of `msg`. This will happen in both the server at page delivery and in the client at page load.
 
@@ -46,7 +46,7 @@ The output page won't have either `:msg` or `:did-init` attributes, it will have
 
 Logic values are JavaScript object properties and, as such, their value can be other than just strings. Since what's inside a `[[...]]` clause is JavaScript code, `count` will be assigned a number, `user` will be assigned an object, `fruit` will be assigned an array and `msg` will still be assigned a string albeit using a different syntax than in the previous example.
 
-> Reflect.js [extended syntax](html#attribute-values) for attributes makes for a comfortable way of expressing code. You can space things out as you would in a JavaScript source, use unescaped `<` and `>` characters, and use JavaScript comments to document things.
+> Reflect.js [extended syntax](markup#attribute-values) for attributes makes for a comfortable way of expressing code. You can space things out as you would in a JavaScript source, use unescaped `<` and `>` characters, and use JavaScript comments to document things.
 
 ## Reactive expressions {#expressions}
 
@@ -85,7 +85,7 @@ In the examples above expressions are only evaluated once, at page initializatio
 
 ### Re-evaluation chain
 
-Expressions are compiled to page-specific reactive code. This code evaluates them once at page initialization, and then automatically re-evaluates them when any of the value they reference changes. If their result changes, it's automatically reflected in the page:
+Expressions are compiled to page-specific reactive code. This code evaluates them once at page initialization, and then automatically re-evaluates them when any of the values they reference changes. If their result changes, it's automatically reflected in the page:
 
 ```html
 <html>
@@ -97,11 +97,11 @@ Expressions are compiled to page-specific reactive code. This code evaluates the
 </html>
 ```
 
-In this example `<body>` has a value `v1` that's incremented every second. This triggers re-evaluation of `v2`, which in turn triggers re-evaluation of fhe `[[v2]]` expression in body text, whose result is then reflected in page text.
+In this example `<body>` has a value `v1` that's incremented every second. This triggers re-evaluation of `v2`, which in turn triggers re-evaluation of the `[[v2]]` expression in body text, whose result is then reflected in page text.
 
 This re-evaluation chain is started periodically by the timer. This only happens in the client though, because timers don't work in the server as everything in the future is left to the client.
 
-In actual applications re-evaluation chains are mostly triggered by user interaction. Similarly, this only happens in the client as user events don't get triggered in the server.
+In actual applications, re-evaluation chains are mostly triggered by user interaction. Similarly, this only happens in the client as user events don't get triggered in the server.
 
 ## Visibility scopes {#scopes}
 
@@ -174,4 +174,4 @@ Function values are always called with `this` bound to their scope, i.e. they al
 
 This example will log `1`: even though `getX()` is called from within the `<span>` scope, it is executed in the context of the `<body>` scope. In other words, it is called with `this` bound to `<body>`'s Reflect.js object.
 
-Behind the scenes the compiler turns first-level function to classic functions &mdash; to make them "this aware" &mdash; and prefixes `this.` to references to non local variables, like `x`. This means `getX()` is actually defined as `function() { return this.x; }`. We can still use `this` explicitly in our code without problems.
+Behind the scenes the compiler turns first-level function to classic functions &mdash; to make them "this-aware" &mdash; and prefixes `this.` to references to non local variables, like `x`. This means `getX()` is actually defined as `function() { return this.x; }`. We can still use `this` explicitly in our code if you prefer.
