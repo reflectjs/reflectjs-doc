@@ -134,7 +134,7 @@ We now have a much simpler markup that clearly specifies what it represents &mda
 Custom tag definitions are usually collected in page fragments (with an `.htm` extension so the server won't deliver them) and page fragments can be [`<:import>`](reference/preprocessor#import)-ed where they're needed, normally inside the `<head>` tag:
 
 ```html
-<!-- intro/lib.html -->
+<!-- intro/lib.htm -->
 <lib>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
