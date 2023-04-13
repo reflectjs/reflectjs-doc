@@ -1,0 +1,8 @@
+<html>
+  <body :count="[[0]]"
+        :did-init="[[
+            setInterval(() => count++, 1000)
+        ]]">
+    seconds: [[count]]
+  </body>
+</html>

@@ -1,0 +1,15 @@
+<html :URLPATH="/">
+  <body>
+    <div>
+      <a href="index">[home]</a> | <a href="products">[products]</a>
+    </div>
+
+    <:on-off :on="[[head.router.name === 'index']]">
+      <div>Home</div>
+    </:on-off>
+
+    <:on-off :on="[[head.router.name === 'products']]">
+      <div>Products</div>
+    </:on-off>
+  </body>
+</html>

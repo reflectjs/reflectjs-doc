@@ -4,7 +4,7 @@
 
 Reflect.js is a groundbreaking reactive web framework which turns *HTML itself* into a [reactive language](#reactivity) for creating dynamic web sites and web apps, still [fully indexable](#indexability) out of the box, that can easily be based on [reusable components](#reusability).
 
-We're developers too, so we'll get straight to some actual code. We'll put our examples in a common intro directory and we'll start a Reflect.js development server from within that dir.
+We're developers too, so we'll get straight to some actual code. We'll put our examples in a common `intro` directory and we'll start a Reflect.js development server from within that dir.
 
 As shown in [Quick Start](quick-start), you can do that quick and easy:
 
