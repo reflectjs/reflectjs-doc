@@ -172,6 +172,6 @@ Function values are always called with `this` bound to their scope, i.e. they al
 </html>
 ```
 
-This example will log `1`: even though `getX()` is called from within the `<span>` scope, it is executed in the context of the `<body>` scope. In other words, it is called with `this` bound to `<body>`'s Reflect.js object.
+This example will log `1`: even though `getX()` is called from within the `<span>` scope, it is executed in the context of the `<body>` scope. In other words, it is called with `this` bound to `<body>`'s Reflect.js object. 
 
-Behind the scenes the compiler turns first-level function to classic functions &mdash; to make them "this-aware" &mdash; and prefixes `this.` to references to non local variables, like `x`. This means `getX()` is actually defined as `function() { return this.x; }`. We can still use `this` explicitly in our code if you prefer.
+> `this` is automatically added by the compiler, but can be still used explicitly if desired.

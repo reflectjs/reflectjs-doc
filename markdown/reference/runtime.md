@@ -46,7 +46,7 @@ Normal HTML attribute that have an [expression](language#reactive-expressions) i
 <html lang="[['en']]">
 ```
 
-will add a value `attr_lang` in the root scope. The reason is, because they can change, we may want to know what value they have in our JavaScript code.
+will add a value `attr_lang` in the root scope.
 
 ### on
 
@@ -59,6 +59,8 @@ These values contain event listeners for DOM events. E.g.:
 will assign the listener function to value on_click in tag's [scope](language#visibility-scopes), and will register it with its underlying DOM element.
 
 Using `:on-` attributes for registering DOM event handlers is recommended, so scopes can be added and removed as needed, with their event listener properly registered and unregistered, when [replicating](#data) scopes or when using [conditional blocks](stdlib).
+
+> `:on-` event listeners are not related to the legacy `on...` HTML attributes, and are implemented with `addEventListener()` behind the scenes.
 
 ### handle
 
@@ -101,16 +103,32 @@ TBD
 
 ### __id
 
+TBD
+
 ### __dom
+
+TBD
 
 ### __scope
 
+TBD
+
 ### __outer
+
+TBD
 
 ### __elementIndex
 
+TBD
+
 ### __isLastElement
+
+TBD
 
 ### __mixColors
 
+TBD
+
 ### __regexMap
+
+TBD

@@ -96,7 +96,7 @@ The `<:on-off>` component is implemented using a [`<template>`](https://develope
 
 > In a real app you'll probably want to keep different page contents in different page fragments and include them in the main file using the [`<:include>`](reference/preprocessor) directive.
 
-> <i class="bi-info-square-fill"></i> You can learn more on that in the [reusability examples](examples/reusability), and about making indexable web apps in the [indexability examples](examples/indexability).
+> <i class="bi-info-square-fill"></i> You can learn more about making indexable web apps in the [indexability examples](examples/indexability).
 
 ## It supports reusability {#reusability}
 
@@ -135,10 +135,10 @@ Part of Reflect.js support for reusability is the [`<:define>`](reference/prepro
 
 We now have a much simpler markup that clearly specifies what it represents &mdash; an application product &mdash; and what's specific to each instance &mdash; name and price &mdash; greatly improving readability and maintainability.
 
-Custom tag definitions are usually collected in page fragments (with an `.htm` extension so the server won't deliver them) and page fragments can be [`<:import>`](reference/preprocessor#import)-ed where they're needed, normally inside the `<head>` tag:
+Custom tag definitions are usually collected in page fragments (with an `.htm` extension so the server won't deliver them):
 
 ```html
-<!-- intro/lib.htm -->
+<!-- intro/products-lib.htm -->
 <lib>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -151,9 +151,28 @@ Custom tag definitions are usually collected in page fragments (with an `.htm` e
 </lib>
 ```
 
+...and can be [`<:import>`](reference/preprocessor#import)-ed where they're needed, normally inside the `<head>` tag:
+
+```html
+<!-- intro/products.htm -->
+<html>
+  <head>
+    <:import src="products-lib.htm"/>
+  </head>
+  <body>
+    <div class="products">
+      <app-product :name="Gadget" :price="1"/>
+      <app-product :name="Widget" :price="2"/>
+    </div>
+  </body>
+</html>
+```
+
 <!--- <iframe src="/examples/intro/products"/> -->
 
-> <i class="bi-info-square-fill"></i> Page fragments must have an arbitrary root tag, like `<lib>` here. You can learn more in the [reusability examples](examples/reusability).
+> Page fragments must have an arbitrary root tag, like `<lib>` here.
+
+> <i class="bi-info-square-fill"></i> You can learn more in the [reusability examples](examples/reusability).
 
 ## Next steps {#next-steps}
 

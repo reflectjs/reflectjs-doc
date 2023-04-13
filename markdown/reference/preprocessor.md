@@ -2,7 +2,7 @@
 
 Preprocessor directives use tags with single-word, lowercase, `:`-prefixed names.
 
-## Import
+## import
 
 ```html
 <:import src="..."/>
@@ -10,7 +10,7 @@ Preprocessor directives use tags with single-word, lowercase, `:`-prefixed names
 
 TBD
 
-## Include
+## include
 
 ```html
 <:include src="..."/>
@@ -18,7 +18,7 @@ TBD
 
 TBD
 
-## Define
+## define
 
 ```html
 <:define tag="..."/>
@@ -26,7 +26,7 @@ TBD
 
 TBD
 
-## Slot
+## slot
 
 ```html
 <:slot name="..."/>
@@ -34,7 +34,7 @@ TBD
 
 TBD
 
-## Markdown
+## markdown
 
 ```html
 <:markdown>...</:markdown>
