@@ -102,7 +102,7 @@ node index.js
 # ... START http://localhost:3002
 ```
 
-> <i class="bi-info-square-fill"></i> By using Reflect.js in a project we can customize it and add our own services and middleware to the server. All options are documented in the [Server Reference](reference/server).
+> <i class="bi-info-square-fill"></i> When using Reflect.js in a project we can customize it and add our own services and middleware to the server. All options are documented in the [Server Reference](reference/server).
 
 ## Next steps
 
