@@ -1,13 +1,13 @@
 
 * [x] Quick Start
 * [x] Introduction
-* [ ] Examples
+<!-- * [ ] Examples
   * [ ] Reactivity
   * [ ] Indexability
-  * [ ] Reusability
+  * [ ] Reusability -->
 * [ ] Tutorial
 * [ ] Reference
-  * [ ] CLI
+  * [x] CLI
   * [x] Markup
     * [x] Incomplete markup
     * [x] Auto-closed tags
@@ -56,3 +56,6 @@
     * [ ] on-off
     * [ ] head.router
   * [ ] Server
+    * [ ] Server class
+    * [ ] Development mode
+    * [ ] Server values

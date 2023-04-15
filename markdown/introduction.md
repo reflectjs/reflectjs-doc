@@ -4,7 +4,7 @@
 
 Reflect.js is a groundbreaking reactive web framework which turns *HTML itself* into a [reactive language](#reactivity) for creating dynamic web sites and web apps, still [fully indexable](#indexability) out of the box, that can easily be based on [reusable components](#reusability).
 
-We're developers too, so we'll get straight to some actual code. We'll put our examples in a common `intro` directory and we'll start a Reflect.js development server from within that dir.
+We're developers too, so we'll get straight to some actual code. We'll put our examples in a common `intro/` directory and we'll start a Reflect.js development server from within that dir.
 
 As shown in [Quick Start](quick-start), you can do that quick and easy:
 
@@ -52,7 +52,7 @@ This is how it works:
 
 Since we're using a [development server](reference/server), requests with the `__noclient` parameter can be used to see what the page looks like to clients with no support for JavaScript, like search engine crawlers, so opening [http://localhost:3001/seconds?__noclient](http://localhost:3001/seconds?__noclient) you'll get a static page saying "seconds: 0" and no client-side code added.
 
-> <i class="bi-info-square-fill"></i> You can learn more about Reflect.js [language](reference/language) and see more [reactivity examples](examples/reactivity).
+> <i class="bi-info-square-fill"></i> You can learn more about Reflect.js [language](reference/language)<!--- and see more [reactivity examples](examples/reactivity)-->.
 
 ## It produces indexable web apps {#indexability}
 
@@ -95,8 +95,8 @@ Home
 The `<:on-off>` component is implemented using a [`<template>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template) tag, meaning its content is effectively removed from the DOM when `:on` is false.
 
 > In a real app you'll probably want to keep different page contents in different page fragments and include them in the main file using the [`<:include>`](reference/preprocessor) directive.
-
-> <i class="bi-info-square-fill"></i> You can learn more about making indexable web apps in the [indexability examples](examples/indexability).
+<!---
+> <i class="bi-info-square-fill"></i> You can learn more about making indexable web apps in the [indexability examples](examples/indexability).-->
 
 ## It supports reusability {#reusability}
 
@@ -171,11 +171,12 @@ Custom tag definitions are usually collected in page fragments (with an `.htm` e
 <!--- <iframe src="/examples/intro/products"/> -->
 
 > Page fragments must have an arbitrary root tag, like `<lib>` here.
-
-> <i class="bi-info-square-fill"></i> You can learn more in the [reusability examples](examples/reusability).
+<!---
+> <i class="bi-info-square-fill"></i> You can learn more in the [reusability examples](examples/reusability).-->
+> <i class="bi-info-square-fill"></i> You can learn more in [Preprocessor](reference/preprocessor).
 
 ## Next steps {#next-steps}
-
-* [Examples](examples) &mdash; see all the features in bite-sized examples
+<!---
+* [Examples](examples) &mdash; see all the features in bite-sized examples-->
 * [Tutorial](tutorial) &mdash; get a taste of Reflect.js development
-* [Reference](reference) &mdash; find all the details you might need
+* [Reference](reference) &mdash; find all the details

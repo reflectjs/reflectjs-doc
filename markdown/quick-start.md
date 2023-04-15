@@ -106,7 +106,6 @@ node index.js
 
 ## Next steps
 
-* [Introduction](introduction) &mdash; get the gist of Reflect.js
-* [Examples](examples/reacivity) &mdash; see all the features in bite-sized examples
+* [Introduction](introduction) &mdash; get the gist of Reflect.js<!--- * [Examples](examples/reacivity) &mdash; see all the features in bite-sized examples -->
 * [Tutorial](tutorial) &mdash; get a taste of Reflect.js development
 * [Reference](reference/cli) &mdash; find all the details
