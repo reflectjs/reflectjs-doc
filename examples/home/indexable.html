@@ -1,0 +1,13 @@
+<html>
+  <body>
+    <:data-source :aka="catData"
+                  :url="/cat-facts"/>
+    <div class="cat-fact">
+      <div>[[catData.content.fact]]</div>
+      <br>
+      <button :on-click="[[() => catData.trigger()]]">
+        Next
+      </button>
+    </div>
+  </body>
+</html>

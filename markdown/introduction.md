@@ -2,7 +2,7 @@
 
 > get the gist of Reflect.js
 
-Reflect.js is a groundbreaking reactive web framework which turns *HTML itself* into a [reactive language](#reactivity) for creating dynamic web sites and web apps, still [fully indexable](#indexability) out of the box, that can easily be based on [reusable components](#reusability).
+Reflect.js HTML into a [reactive language](#reactivity) for creating dynamic web sites and web apps, still [fully indexable](#indexability) out of the box, that can easily be based on [reusable components](#reusability).
 
 We're developers too, so we'll get straight to some actual code. We'll put our examples in a common `intro/` directory and we'll start a Reflect.js development server from within that dir.
 
@@ -58,7 +58,7 @@ Since we're using a [development server](reference/server), requests with the `_
 
 Reflect.js was designed with both the server and the client in mind. Thanks to its holistic approach, it makes it easy to create web projects which behave both as fully indexable web sites and as modern, dynamic web apps at the same time.
 
-In our example we'll create an app with its own dir in intro/app and a page like this:
+In our example we'll create an app with its own dir in `intro/app/` and a page like this:
 
 ```html
 <!-- intro/app/index.html -->
@@ -79,18 +79,13 @@ In our example we'll create an app with its own dir in intro/app and a page like
 </html>
 ```
 
-<iframe src="/examples/intro/app"/>
-
 This page is delivered for all paths inside its own directory, thanks to the [`:URLPATH`](reference/server#urlpath) directive. It can know what name it was requested with by using the [`head.router`](reference/stdlib#head-router) standard component.
 
 Based on that, it can decide what actual content is displayed using the [`<:on-off>`](reference/stdlib#on-off) standard component.
 
 [http://localhost:3001/app](http://localhost:3001/app/):
 
-```text
-[home] | [products]
-Home
-```
+<iframe src="/examples/intro/app"/>
 
 The `<:on-off>` component is implemented using a [`<template>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template) tag, meaning its content is effectively removed from the DOM when `:on` is false.
 

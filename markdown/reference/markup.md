@@ -45,7 +45,7 @@ Sometimes we want our comments to stay private. Plus, by enforcing this rule, Re
 
 ## Attribute names
 
-Attribute names starting with `:` are valid (they're used to declare [logic values](reference/language)) although they won't directly appear in output pages.
+Attribute names starting with `:` are valid (they're used to declare [logic values](language)) although they won't directly appear in output pages.
 
 ```html
 <html :count=[[1]]>

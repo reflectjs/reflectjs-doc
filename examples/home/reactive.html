@@ -1,0 +1,14 @@
+<html :color="red">
+  <head>
+    <style>
+      body {
+        color: [[color]];
+      }
+    </style>
+  </head>
+  <body :on-click="[[() => {
+          color = (color === 'red' ? 'green' : 'red')
+        }]]">
+    Click to change the [[color]] color.
+  </body>
+</html>

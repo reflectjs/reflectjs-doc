@@ -40,7 +40,7 @@ Values using special prefixes have special meanings based on the prefix itself. 
 
 ### attr
 
-Normal HTML attribute that have an [expression](language#reactive-expressions) in their value are available with this prefix in tag's [scope](language#visibility-scopes). E.g.:
+Normal HTML attribute that have an [expression](language#expressions) in their value are available with this prefix in tag's [scope](language#scopes). E.g.:
 
 ```html
 <html lang="[['en']]">
@@ -56,7 +56,7 @@ These values contain event listeners for DOM events. E.g.:
 <body :on-click="[[(ev) => ...]]">
 ```
 
-will assign the listener function to value on_click in tag's [scope](language#visibility-scopes), and will register it with its underlying DOM element.
+will assign the listener function to value on_click in tag's [scope](language#scopes), and will register it with its underlying DOM element.
 
 Using `:on-` attributes for registering DOM event handlers is recommended, so scopes can be added and removed as needed, with their event listener properly registered and unregistered, when [replicating](#data) scopes or when using [conditional blocks](stdlib).
 
