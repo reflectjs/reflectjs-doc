@@ -119,7 +119,7 @@ Scopes can be nested, since tags can. Expressions in a scope can see values decl
 </html>
 ```
 
-`did-init` will log `10 21 32`: it accesses `v1` in the root, `v2` in the body &mdash; which masks `v2` in the root &mdash; and `v3` in the div &mdash; which masks `v3` in the body and `v3` in the root.
+`did-init` will log "10 21 32": it accesses `v1` in the root, `v2` in the body &mdash; which masks `v2` in the root &mdash; and `v3` in the div &mdash; which masks `v3` in the body and `v3` in the root.
 
 Values in a scope have no declaration order, they can all access each other regardless of their position in the code.
 
