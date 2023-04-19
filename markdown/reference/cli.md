@@ -1,6 +1,6 @@
 # CLI
 
-Once installed Reflect.js provides the `reflectjs` command:
+Once installed, Reflect.js provides the `reflectjs` command:
 
 ```sh
 npm install -g reflectjs-core
