@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <style>
+      .app-product > span {
+        float: right;
+      }
+    </style>
+    <:define tag="app-product" class="app-product">
+      [[title]] <span>&euro;[[price]]</span>
+    </:define>
+  </head>
+
+  <body>
+    <app-product :title="gadget" :price="1"/>
+    <app-product :title="widget" :price="2"/>
+    <app-product :title="thingy" :price="3"/>
+  </body>
+</html>

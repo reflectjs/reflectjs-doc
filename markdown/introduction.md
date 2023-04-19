@@ -2,9 +2,9 @@
 
 > get the gist of Reflect.js
 
-Reflect.js HTML into a [reactive language](#reactivity) for creating dynamic web sites and web apps, still [fully indexable](#indexability) out of the box, that can easily be based on [reusable components](#reusability).
+Reflect.js turns HTML into a [reactive language](#reactivity) for creating dynamic web sites and web apps, still [fully indexable](#indexability) out of the box, that can easily be based on [reusable components](#reusability).
 
-We're developers too, so we'll get straight to some actual code. We'll put our examples in a common `intro/` directory and we'll start a Reflect.js development server from within that dir.
+We'll get straight to some actual code to show what this looks like in practice. We'll put our examples in a common `intro/` directory and we'll start a Reflect.js development server from within that dir.
 
 As shown in [Quick Start](quick-start), you can do that quick and easy:
 
@@ -174,4 +174,4 @@ Custom tag definitions are usually collected in page fragments (with an `.htm` e
 <!---
 * [Examples](examples) &mdash; see all the features in bite-sized examples-->
 * [Tutorial](tutorial) &mdash; get a taste of Reflect.js development
-* [Reference](reference) &mdash; find all the details
+* [Reference](reference/cli) &mdash; find all the details

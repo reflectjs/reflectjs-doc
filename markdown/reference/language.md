@@ -16,7 +16,7 @@ Logic values can be added to any HTML using `:`-prefixed attributes. These attri
 </html>
 ```
 
-The output page won't have the `:msg` and `:did-init` attributes, it will have its own JavaScript code that will handle them. Specifically, page root object &mdash; associated with page root tag, `<html>` &mdash; is given an `msg` property whose value is the `"hello"` string.
+The output page won't have the `:msg` and `:did-init` attributes, it will have its own JavaScript code that will handle them. Specifically, the page root object &mdash; associated with tag `<html>` &mdash; is given an `msg` property whose value is the `"hello"` string.
 
 `did-init` is a [delegate method](runtime#did) that's executed when a tag's scope is initialized. In this example it simply logs the value of `msg`. This will happen in both the server at page delivery and in the client at page load.
 
