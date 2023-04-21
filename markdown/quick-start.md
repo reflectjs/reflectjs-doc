@@ -1,7 +1,5 @@
 # Quick Start
 
-> get up and running with Reflect.js
-
 Reflect.js is an [Express](https://expressjs.com/) application for [Node.js](https://nodejs.org/) which processes and serves web pages, giving them the ability to execute unified client/server reactive logic.
 
 ## Installation

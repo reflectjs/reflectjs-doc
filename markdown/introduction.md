@@ -1,7 +1,5 @@
 # Introduction
 
-> get the gist of Reflect.js
-
 Reflect.js turns HTML into a [reactive language](#reactivity) for creating dynamic web sites and web apps, still [fully indexable](#indexability) out of the box, that can easily be based on [reusable components](#reusability).
 
 We'll get straight to some actual code to show what this looks like in practice. We'll put our examples in a common `intro/` directory and we'll start a Reflect.js development server from within that dir.
