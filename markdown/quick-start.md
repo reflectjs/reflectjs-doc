@@ -36,9 +36,7 @@ We can add a simple page...
 
 ...and open [http://localhost:3001](http://localhost:3001/) to see it in action:
 
-```
-Good morning!
-```
+<iframe src="/examples/quick/index.html"/>
 
 ## Use in a project
 

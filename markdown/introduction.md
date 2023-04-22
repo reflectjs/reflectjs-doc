@@ -163,10 +163,7 @@ Custom tag definitions are usually collected in page fragments (with an `.htm` e
 
 <!--- <iframe src="/examples/intro/products"/> -->
 
-> Page fragments must have an arbitrary root tag, like `<lib>` here.
-<!---
-> <i class="bi-info-square-fill"></i> You can learn more in the [reusability examples](examples/reusability).-->
-> <i class="bi-info-square-fill"></i> You can learn more in [Preprocessor](reference/preprocessor).
+> Page fragments must have an arbitrary root tag, like `<lib>` here. You can learn more in [Preprocessor](reference/preprocessor).
 
 ## Next steps {#next-steps}
 <!---
