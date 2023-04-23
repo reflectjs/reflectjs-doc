@@ -1,0 +1,9 @@
+<html>
+<head>
+  <meta name="color-scheme" content="light dark">
+</head>
+<body :n=[[0]]
+      :did-init=[[setInterval(()=> n++, 1000)]]>
+  Seconds: [[n]]
+</body>
+</html>
