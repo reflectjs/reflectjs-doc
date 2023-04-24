@@ -107,6 +107,8 @@ In actual applications, re-evaluation chains are mostly triggered by user intera
 
 Tags with at least one logic value have their own scope, meaning they have their own JavaScript object behind the scenes. In addition, the standard tags `<html>`, `<head>` and `<body>` always have a scope regardless.
 
+### Value masking
+
 Scopes can be nested, since tags can. Expressions in a scope can see values declared in the scope itself as well as those declared in its outer scopes. Values in a scope [mask](https://en.wikipedia.org/wiki/Variable_shadowing) namesake values in outer scopes.
 
 ```html
@@ -122,6 +124,8 @@ Scopes can be nested, since tags can. Expressions in a scope can see values decl
 `did-init` will log "10 21 32": it accesses `v1` in the root, `v2` in the body &mdash; which masks `v2` in the root &mdash; and `v3` in the div &mdash; which masks `v3` in the body and `v3` in the root.
 
 Values in a scope have no declaration order, they can all access each other regardless of their position in the code.
+
+### Scope names
 
 Scopes can be given a name with the special `:aka` attribute, and standard tags `<html>`, `<head>` and `<body>` are named "page", "head" and "body" by default.
 
@@ -147,6 +151,24 @@ A scope's name exists as value in its outer scope, and can be used to access its
 In this example both the `<style>` and the `<body>` contents depend on `color`, declared in the `<head>` tag. `<style>` can directly see it because it's in one of its outer scopes. `<body>` can access it via `head.color` because it can see `head` in its outer scope `<html>` and can use it to access `color` via dot notation.
 
 Thanks to reactivity, both automatically reflect changes in color value.
+
+### Self referencing values
+
+When a value seems to reference itself in its initialization expression, it's actually referencing a namesake value in its outer scopes:
+
+```html
+<html>
+  <body :v="Hello">
+    <div :v="[[v]] world">
+      [[v]]
+    </div>
+  </body>
+</html>
+```
+
+<iframe src="/examples/ref/lang/scopes/self-referencing-value.html"/>
+
+> This isn't true for functions: a function can call itself in order to implement recursive algorithms.
 
 ## Scope methods {#methods}
 

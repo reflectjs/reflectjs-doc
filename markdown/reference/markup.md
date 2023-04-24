@@ -1,6 +1,6 @@
 # Markup
 
-The Reflect.js language is based on HTML, so it has to define how it handles its quirks and try to make our life easier where possible.
+The Reflect.js language is based on HTML, so it has to define how it handles its quirks and how it tries to make our life easier where possible.
 
 ## Incomplete markup
 
