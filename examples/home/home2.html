@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <meta name="color-scheme" content="light dark">
+  </head>
+  <body>
+    <:data-source :aka="cat"
+                  :url="/cat-facts"/>
+    <div>
+      [[cat.content.fact]]
+      <button :on-click="[[
+        () => cat.trigger()
+      ]]">Next</button>
+    </div>
+  </body>
+</html>
