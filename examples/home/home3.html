@@ -28,7 +28,7 @@
     }
     @media (prefers-color-scheme: dark) {
       body {
-        color: #ddd;
+        color: #ccc;
       }
       div {
         border-color: #444;
@@ -41,12 +41,12 @@
 </head>
 <body>
 <:define tag="app-item">
-  <span>[[k]]</span>
-  <b :hidden="[[v < 1]]">[[v]]</b>
+  <span>[[name]]</span>
+  <b :hidden="[[n < 1]]">[[n]]</b>
 </:define>
 
-<app-item :k="Inbox" :v="2"/>
-<app-item :k="Sent" :v="3"/>
-<app-item :k="Drafts" :v="0"/>
+<app-item :name="Inbox" :n="2"/>
+<app-item :name="Sent" :n="3"/>
+<app-item :name="Drafts" :n="0"/>
 </body>
 </html>
