@@ -1,5 +1,6 @@
 <html>
 <head>
+  <meta name="color-scheme" content="light dark">
   <style>
     body {
       font-family: -apple-system,BlinkMacSystemFont,"Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
@@ -24,6 +25,17 @@
       padding: .25em 1em;
       margin: .25 0;
       border-radius: 1em;
+    }
+    @media (prefers-color-scheme: dark) {
+      body {
+        color: #ddd;
+      }
+      div {
+        border-color: #444;
+      }
+      div > b {
+        background-color: #1d4ed8;
+      }
     }
   </style>
 </head>
