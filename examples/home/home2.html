@@ -6,13 +6,24 @@
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         line-height: 1.5em;
       }
+      div {
+        display: flex;
+        gap: .5em;
+      }
+      p {
+        flex: 1;
+        margin: 0;
+      }
+      button {
+        height: 2em;
+      }
     </style>
   </head>
   <body>
     <:data-source :aka="cat"
                   :url="/cat-facts"/>
     <div>
-      [[cat.content.fact]]
+      <p>[[cat.content.fact]]</p>
       <button :on-click="[[
         () => cat.trigger()
       ]]">Next</button>
